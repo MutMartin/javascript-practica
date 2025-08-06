@@ -40,13 +40,26 @@ if (datosIniciales.nombre) {
     agregarDatosABase(baseDeDatos, datosIniciales);
 }
 
-let respuesta = prompt("¿Te gustaría agregar a alguien más a la base de datos? (si/no)");
+let respuesta;
 
-while (respuesta && respuesta.toLowerCase() === "si") {
-    const nuevosDatos = pedirDatos();
-    agregarDatosABase(baseDeDatos, nuevosDatos);
-    console.log("¡Genial! Se agregó a alguien más a la base de datos.");
+do {
     respuesta = prompt("¿Te gustaría agregar a alguien más a la base de datos? (si/no)");
-}
+
+    if (!respuesta) continue; // si el usuario aprieta cancelar o deja vacío
+
+    const r = respuesta.toLowerCase().trim();
+
+    if (r === "si") {
+        const nuevosDatos = pedirDatos();
+        agregarDatosABase(baseDeDatos, nuevosDatos);
+        console.log("¡Genial! Se agregó a alguien más a la base de datos.");
+    } else if (r === "no") {
+        console.log("Está bien, ¡espero que tengas un gran día!");
+        break;
+    } else {
+        console.log("Respuesta no válida. Por favor, responde con 'si' o 'no'.");
+    }
+
+} while (true);
 
 console.log("Base de datos final:", baseDeDatos);
