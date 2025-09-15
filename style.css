@@ -1,3 +1,114 @@
-*{
-    background-color: aqua;
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 50px;
+}
+
+/* Contenedor principal */
+form {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 40px;
+  color: #34495e;
+}
+
+/* Inputs y textarea */
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 40px;
+  transition: border 0.3s;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+  border: 1px solid #2980b9;
+  outline: none;
+}
+
+/* Botón principal */
+form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #1f6391;
+}
+
+/* Lista de pedidos */
+#listaPedidos {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+#listaPedidos li {
+  background: #fff;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+#listaPedidos li strong {
+  color: #2c3e50;
+}
+
+#listaPedidos li em {
+  display: block;
+  margin-top: 6px;
+  color: #7f8c8d;
+}
+
+/* Botón eliminar */
+#listaPedidos button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#listaPedidos button:hover {
+  background: #c0392b;
 }

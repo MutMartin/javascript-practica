@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-    <title>Java Script</title>
+    <title>Pedidos de Mantenimiento</title>
 </head>
-<body>
 
-    
+<body>
+    <main>
+        <div class="container">
+        <h1>Registro de Pedidos</h1>
+
+        <form id="pedidoForm">
+            <label for="nombre">Nombre del solicitante:</label>
+            <input type="text" id="nombre" required><br><br>
+
+            <label for="sector">Sector:</label>
+            <input type="text" id="sector" required><br><br>
+
+            <label for="descripcion">Descripción del problema:</label><br>
+            <textarea id="descripcion" required></textarea><br><br>
+
+            <button type="submit">Guardar Pedido</button>
+        </form>
+
+        <h2>Pedidos Registrados</h2>
+        <ul id="listaPedidos"></ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
