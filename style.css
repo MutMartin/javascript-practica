@@ -79,13 +79,17 @@ form button:hover {
 }
 
 #listaPedidos li {
-  background: #fff;
-  margin-bottom: 12px;
+  list-style: none;
+  margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s ease;
 }
-
 #listaPedidos li strong {
   color: #2c3e50;
 }
@@ -112,6 +116,26 @@ form button:hover {
 #listaPedidos button:hover {
   background: #c0392b;
 }
-#listaPedidos li[data-estado="Pendiente"] { border-left: 6px solid orange; }
-#listaPedidos li[data-estado="En proceso"] { border-left: 6px solid blue; }
-#listaPedidos li[data-estado="Finalizado"] { border-left: 6px solid green; }
+
+
+/* Colores según estado */
+.estado-pendiente {
+  border-left: 8px solid #e74c3c;
+  background-color: #ffe5e5 !important;
+}
+
+.estado-proceso {
+  border-left: 8px solid #f1c40f;
+  background-color: #fff3cd !important;
+}
+
+.estado-finalizado {
+  border-left: 8px solid #2ecc71;
+  background-color: #e6ffed !important;
+}
+
+/* Efecto al pasar el mouse (opcional) */
+#listaPedidos li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
