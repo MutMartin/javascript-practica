@@ -112,3 +112,6 @@ form button:hover {
 #listaPedidos button:hover {
   background: #c0392b;
 }
+#listaPedidos li[data-estado="Pendiente"] { border-left: 6px solid orange; }
+#listaPedidos li[data-estado="En proceso"] { border-left: 6px solid blue; }
+#listaPedidos li[data-estado="Finalizado"] { border-left: 6px solid green; }

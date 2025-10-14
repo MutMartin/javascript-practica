@@ -1,0 +1,4 @@
+[
+  { "nombre": "Laura", "sector": "Producción", "descripcion": "Fuga de agua en baño", "estado": "Pendiente" },
+  { "nombre": "Carlos", "sector": "Depósito", "descripcion": "Luz quemada", "estado": "En proceso" }
+]

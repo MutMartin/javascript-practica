@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos de Mantenimiento</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
 </head>
+<!-- modificacion -->
 
 <body>
     <main>
         <div class="container">
-        <h1>Registro de Pedidos</h1>
+            <h1>Registro de Pedidos</h1>
 
-        <form id="pedidoForm">
-            <label for="nombre">Nombre del solicitante:</label>
-            <input type="text" id="nombre" required><br><br>
+            <form id="pedidoForm">
+                <label for="nombre">Nombre del solicitante:</label>
+                <input type="text" id="nombre" required><br><br>
 
-            <label for="sector">Sector:</label>
-            <input type="text" id="sector" required><br><br>
+                <label for="sector">Sector:</label>
+                <input type="text" id="sector" required><br><br>
 
-            <label for="descripcion">Descripción del problema:</label><br>
-            <textarea id="descripcion" required></textarea><br><br>
+                <label for="descripcion">Descripción del problema:</label><br>
+                <textarea id="descripcion" required></textarea><br><br>
 
-            <button type="submit">Guardar Pedido</button>
-        </form>
+                <button type="submit">Guardar Pedido</button>
+            </form>
 
-        <h2>Pedidos Registrados</h2>
-        <ul id="listaPedidos"></ul>
+            <h2>Pedidos Registrados</h2>
+            <ul id="listaPedidos"></ul>
         </div>
     </main>
-    
+
 </body>
 
 </html>
