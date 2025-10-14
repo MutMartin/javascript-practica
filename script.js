@@ -2,10 +2,10 @@
 const form = document.getElementById("pedidoForm");
 const lista = document.getElementById("listaPedidos");
 
-// Intentamos cargar pedidos desde localStorage o archivo JSON
+// cargar pedidos
 let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
 
-// Cargar pedidos simulados (JSON remoto)
+// Cargar pedidos simulados
 if (pedidos.length === 0) {
   fetch("pedidos.json")
     .then(res => res.json())
@@ -53,7 +53,7 @@ form.addEventListener("submit", (e) => {
   mostrarPedidos();
 });
 
-// Cambiar estado del pedido (ciclo)
+// Cambiar estado del pedido
 function cambiarEstado(index) {
   const estados = ["Pendiente", "En proceso", "Finalizado"];
   let actual = pedidos[index].estado || "Pendiente";
