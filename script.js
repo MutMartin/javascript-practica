@@ -1,12 +1,8 @@
-// ===============================
-// Referencias del DOM
-// ===============================
 const form = document.getElementById("pedidoForm");
 const lista = document.getElementById("listaPedidos");
 
-// ===============================
+
 // Cargar pedidos del localStorage o del archivo JSON
-// ===============================
 let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
 
 // Si no hay pedidos guardados, los cargamos desde pedidos.json
@@ -23,16 +19,15 @@ if (pedidos.length === 0) {
   mostrarPedidos();
 }
 
-// ===============================
 // Mostrar pedidos en la lista
-// ===============================
+
 function mostrarPedidos() {
-  lista.innerHTML = ""; // limpia la lista
+  lista.innerHTML = ""; 
 
   pedidos.forEach((pedido, index) => {
     const li = document.createElement("li");
 
-    // determinar estado actual y asignar clase de color
+    // clase de color
     const estado = pedido.estado || "Pendiente";
     li.classList.remove("estado-pendiente", "estado-proceso", "estado-finalizado");
     li.classList.add(`estado-${estado.toLowerCase().replace(" ", "-")}`);
@@ -55,7 +50,7 @@ function mostrarPedidos() {
     btnEliminar.textContent = "❌ Eliminar";
     btnEliminar.addEventListener("click", () => eliminarPedido(index));
 
-    // ensamblar el pedido en el <li>
+    // ensamblar el pedido en el li
     li.appendChild(info);
     li.appendChild(btnEstado);
     li.appendChild(btnEliminar);
@@ -63,9 +58,9 @@ function mostrarPedidos() {
   });
 }
 
-// ===============================
+
 // Validar campos del formulario
-// ===============================
+
 function validarCampos(nombre, sector, descripcion) {
   if (!nombre || !sector || !descripcion) {
     Swal.fire("⚠️ Campos incompletos", "Todos los campos son obligatorios", "warning");
@@ -74,9 +69,9 @@ function validarCampos(nombre, sector, descripcion) {
   return true;
 }
 
-// ===============================
+
 // Guardar nuevo pedido
-// ===============================
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -91,7 +86,6 @@ form.addEventListener("submit", (e) => {
     sector,
     descripcion,
     estado: "Pendiente",
-    fecha: dayjs().format("DD/MM/YYYY HH:mm")
   };
 
   pedidos.push(nuevoPedido);
@@ -102,9 +96,9 @@ form.addEventListener("submit", (e) => {
   mostrarPedidos();
 });
 
-// ===============================
+
 // Cambiar estado del pedido
-// ===============================
+
 function cambiarEstado(index) {
   const estados = ["Pendiente", "En proceso", "Finalizado"];
   let actual = pedidos[index].estado || "Pendiente";
@@ -117,12 +111,12 @@ function cambiarEstado(index) {
   mostrarPedidos();
 }
 
-// ===============================
+
 // Eliminar pedido
-// ===============================
+
 function eliminarPedido(index) {
   Swal.fire({
-    title: "¿Eliminar pedido?",
+    title: "Eliminar pedido?",
     text: "Esta acción no se puede deshacer",
     icon: "warning",
     showCancelButton: true,

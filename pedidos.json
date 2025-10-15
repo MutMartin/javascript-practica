@@ -1,4 +1,17 @@
 [
-  { "nombre": "Laura", "sector": "Producción", "descripcion": "Fuga de agua en baño", "estado": "Pendiente" },
-  { "nombre": "Carlos", "sector": "Depósito", "descripcion": "Luz quemada", "estado": "En proceso" }
+  { "nombre": "Juan Pérez", "sector": "Compras", "descripcion": "Impresora no funciona", "estado": "Pendiente" },
+  { "nombre": "Ana Gómez", "sector": "Sistemas", "descripcion": "Error en la red interna", "estado": "En proceso" },
+  { "nombre": "Luis Martínez", "sector": "RRHH", "descripcion": "No puedo fichar entradas", "estado": "Pendiente" },
+  { "nombre": "Clara Torres", "sector": "Finanzas", "descripcion": "Error en cálculo de nómina", "estado": "Finalizado" },
+  { "nombre": "Pedro López", "sector": "Compras", "descripcion": "Falta stock de material", "estado": "Pendiente" },
+  { "nombre": "Sofía Ruiz", "sector": "Sistemas", "descripcion": "Problema con el correo electrónico", "estado": "En proceso" },
+  { "nombre": "Diego Fernández", "sector": "RRHH", "descripcion": "No puedo modificar datos de empleados", "estado": "Pendiente" },
+  { "nombre": "María Sánchez", "sector": "Finanzas", "descripcion": "Reporte mensual incorrecto", "estado": "Finalizado" },
+  { "nombre": "Carlos Ramírez", "sector": "Compras", "descripcion": "Solicitud de presupuesto pendiente", "estado": "Pendiente" },
+  { "nombre": "Lucía Morales", "sector": "Sistemas", "descripcion": "Sistema lento al iniciar sesión", "estado": "En proceso" },
+  { "nombre": "Jorge Díaz", "sector": "RRHH", "descripcion": "Problema con vacaciones registradas", "estado": "Pendiente" },
+  { "nombre": "Paula Herrera", "sector": "Finanzas", "descripcion": "Error en factura de proveedor", "estado": "Finalizado" },
+  { "nombre": "Ricardo Blanco", "sector": "Compras", "descripcion": "Retraso en entrega de materiales", "estado": "Pendiente" },
+  { "nombre": "Verónica Castro", "sector": "Sistemas", "descripcion": "Fallo en servidor de base de datos", "estado": "En proceso" },
+  { "nombre": "Miguel Ortiz", "sector": "RRHH", "descripcion": "Problema con credenciales de empleados", "estado": "Pendiente" }
 ]
